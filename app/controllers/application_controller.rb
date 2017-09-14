@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
 
   def about
     render('../views/about')
+  end
 end
