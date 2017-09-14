@@ -1,0 +1,22 @@
+<div clas="container">
+  <h1>Sign Up! It's free.</h1>
+  <%= form_for User.new do |f| %>
+    <div class="form-group">
+      <label for="inputUsertName">Username</label>
+      <%= f.text_field :username, class: "form-control", id:"inputUsername", placeholder: "Choose username"%>
+      <small id="usernameHelp" class="form-text text-muted" >We will never share your info with anyone else.</small>
+      <!--<input type="text" class="form-control" id="inputUsername" placeholder="Choose username"/>-->
+    </div>
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <%= f.email_field :email, class:"form-control", id:"inputEmail", placeholder:"i.e. your_name@email.com"%>
+
+    </div>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <%= f.password_field :password, class:"form-control", id: "inputPassword"%>
+    </div>
+    <%= f.submit "Sign Up", class:"btn btn-primary"%>
+  </form>
+  <% end %>
+</div>
