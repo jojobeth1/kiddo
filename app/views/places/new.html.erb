@@ -1,5 +1,31 @@
+<%= form_for Place.new do |f| %>
 <div class="container">
   <h1>Add a new Place</h1>
-  <%= form_for @places do |f| %>
-  
+  <div class="form-group">
+    <label>Place Name</label>
+    <%= f.text_field :name%>
+  </div>
+  <div class="form-group">
+    <label>Address</label>
+    <%= f.text_area :address, placeholder: "enter address" %>
+  </div>
+  <div class="form-group">
+    <label>Hours</label>
+    <%= f.text_field :hours %>
+  </div>
+  <div class="form-group">
+    <label>Phone</label>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="form-group">
+    <label>Website</label>
+    <%= f.text_field :url %>
+  </div>
+    <label>About</label>
+    <%= f.text_area :about %>
+  <div class="form-group">
+
+    <%= f.submit "Submit", class: "btn" %>
+  </div>
 </div>
+<% end %>
