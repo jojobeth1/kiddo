@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :password_digest
       t.text :bio
       t.integer :num_of_kids
-
       t.timestamps
     end
   end

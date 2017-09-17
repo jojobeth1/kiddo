@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
 
   # Routes for User
-  get "/signup", to: "users#new", as: "new_user" # New User Form View
+
   post "/users", to: "users#create" # Post to users db
   get "/users/:id", to:"users#show", as:"user" # show user's profile page
   get "/users/:id/edit", to: "users#edit", as: "edit_user"# Edit User Form

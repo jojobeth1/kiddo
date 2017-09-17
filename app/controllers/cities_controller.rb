@@ -2,6 +2,7 @@ class CitiesController < ApplicationController
 
   def index
     @cities = Cities.all
+    render :index
   end
 
   #get "/cities", to: "cities#new", as: "new_city"
@@ -15,10 +16,12 @@ class CitiesController < ApplicationController
     city.user_id = user_id
     if city.save
       redirect_to user_path user.username
+    end
   end
   #get "/cities/:id", to: "cities#show", as:"city"
   def show
-    @city = City.find_by_id(params[:city_id])
+    @city = City.find(params[:id])
+
   end
   #get "/cities/:id/edit", to:"cities#edit", as:"edit_city"
   def update
