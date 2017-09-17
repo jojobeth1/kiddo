@@ -16,6 +16,13 @@
 
   <body>
     <%= render partial: 'header' %>
+    <div>
+      <% flash.each do |key, value| %>
+        <div class="center">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
     <%= yield %>
     <%= render partial: 'footer' %>
   </body>
