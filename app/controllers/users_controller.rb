@@ -24,7 +24,8 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       @user = User.create(user_params)
-      redirect_to user_path(@user.username)
+      login(@user) # log user in
+      redirect_to @user # go to show
     end
   end
 
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
     @comments = Comment.where user_id: @user.id
     @comments = @comments.reverse
     @places = Place.where user_id: @user.id
-    @places = @places.reverse
+    #@places = @places.reverse
   end
 
   def edit
@@ -48,7 +49,7 @@ class UsersController < ApplicationController
 
   def update
     user_params = require
-
+  end
 
   # private
   #

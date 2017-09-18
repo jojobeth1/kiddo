@@ -6,11 +6,14 @@ class SessionsController < ApplicationController
 
 # post "/sessions", to: "sessions#create"
   def create
-    @user = User.create(user_params)
+    user_params = params.require(:user).permit(:email, :password_digest)
+    # confirm email & password combo is correct
+    @user = User.confirm(user_params)
     if @user
       login(@user)
       flash[:notice] = "You are now logged in."
-      redirect_to user_path
+      redirect_to @user
+      #redirect_to user_path(@user.id)
     else
       flash[:error] = "Incorrect email or password. Try again"
       redirect_to login_path
@@ -23,9 +26,4 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  private
-
-  def user_params
-    params.require(:user).permit(:username, :password)
-  end
 end
