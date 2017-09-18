@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
-  def index
-    @comments = Comment.all
-  end
+  # def index
+  #   @comments = Comment.all
+  # end
   # get "/comments", to: "comments#new", as: "new_comment"
   def new
       @comment = Comment.new

@@ -1,0 +1,18 @@
+<div>
+  <h2>Log In</h2>
+  <%= form_for @user, url:"/sessions", method: "post" do |f| %>
+  <div class="row">
+    <div class="col">
+      <label>Username</label>
+      <%=f.text_field :username, class:"form-content"%>
+    </div>
+    <div class="col">
+      <label>Password</label>
+      <%=f.password_field :password_field, class: "form-content"%>
+    </div>
+    <div>
+      <%= f.submit "Log In", class: "btn" %>
+    </div>
+  </div>
+  <% end %>
+</div>
