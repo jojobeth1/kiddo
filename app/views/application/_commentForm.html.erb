@@ -1,0 +1,12 @@
+<%= form_for @comment do |f| %>
+<div>
+    <label>Comment</label>
+    <%= f.text_area :comment,
+    placeholder: "Write your comment here."
+    %>
+    <div>
+    <%= label =@comment.comment ? "Save" : "Submit" %>
+    <%= f.submit label, class:"btn"%>
+    </div>
+    <% end %>
+</div>

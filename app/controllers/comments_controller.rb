@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     user_id = session[:user_id]
     if user_id.nil?
       flash[:error] = "Please login to comment."
-      redirect_to new_user_path
+      redirect_to root_path
     elsif
       comment = Comment.new(comment_params)
       post.user_id = user_id
