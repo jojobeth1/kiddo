@@ -1,4 +1,4 @@
-<%= form_for Place.new do |f| %>
+<%= form_for @place, url: create_place_path, method: "create" do |f| %>
 <div class="container">
   <h1>Add a new Place</h1>
   <div class="form-group">
@@ -7,7 +7,9 @@
   </div>
   <div class="form-group">
     <label>City</label>
-    <%= f.text_field :city %>
+
+<%= f.select :city_id, @cities.collect{ |city| [city.name, city.id] } %>
+
   </div>
   <div class="form-group">
     <label>Address</label>
@@ -27,7 +29,7 @@
   </div>
     <label>About</label>
     <%= f.text_area :about %>
-  <div class="form-group">
+  <div class="actions">
 
     <%= f.submit "Submit", class: "btn" %>
   </div>

@@ -25,10 +25,11 @@ Rails.application.routes.draw do
   delete "/cities/:id", to: "cities#destroy", as: "delete_city"
 
   # Routes for place
-  get "/places", to: "places#new", as: "new_place" # New Place Form
-  post "/places", to: "places#create" # Post to places db
+  get "/places", to: "places#index", as: "places"
+  get "/places/new", to: "places#new", as: "new_place" # New Place Form
+  post "/places", to: "places#create", as: "create_place"# Post to places db
   get "/places/:id", to: "places#show", as: "place" # view for a place
-  get "/places/:id", to: "places#edit", as: "edit_place" # edit place Form
+  get "/places/:id/edit", to: "places#edit", as: "edit_place" # edit place Form
   patch "/places/:id", to: "places#update", as: "update_place" # update place in db
   delete "/places/:id", to: "places#destroy", as: "delete_place"
 
@@ -39,5 +40,4 @@ Rails.application.routes.draw do
   get "/comments/:id", to: "comments#edit", as: "edit_comment" # edit comment
   patch "/comments/:id", to: "comments#update", as:"update_comment" #patch comment in db
   delete "/comments/:id", to: "comment#destroy", as: "delete_comment"
-
 end

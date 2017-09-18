@@ -1,0 +1,21 @@
+<% user = current_user %>
+<% is_owner = user ? user.id == @user.id : false %>
+   <div>
+     <% if is_owner %>
+       <div class="new-post-button" style="margin-bottom:25px;">
+         <%= button_to "New Place", new_place_path, method: :get, class: "btn" %>
+       </div>
+     <% end %>
+   </div>
+
+   <div class="place">
+       <h5>Click "New Place" to start writing about a place.</h5>
+
+       <% @places.each do |place| %>
+         <h4><%= link_to "#{place.name}", place_path(place.id) %></h4>
+
+
+     <% end %>
+   </div>
+
+</div>
