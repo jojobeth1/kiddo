@@ -9,7 +9,7 @@ module SessionsHelper
   end
 
   def logout
-    @current_user = sessions[:user_id] = nil
+    @current_user = session[:user_id] = nil
   end
 
   # def authorized?(resource_id)

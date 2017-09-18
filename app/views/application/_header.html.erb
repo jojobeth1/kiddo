@@ -14,12 +14,20 @@
   </form>
   -->
   <ul class="navbar-nav ml-auto">
+    <% user = current_user %>
+    <% if user %>
+    <li><%= link_to "Hi, #{user.username}!", user_path(user.id), class: "nav-link" %></li>
+    <li>
+      <%= link_to "Log Out", logout_path, class: "nav-link" %>
+    </li>
+    <% else %>
     <li class="nav-item">
         <a class="nav-link" href="/">Sign Up</a>
     </li>
     <li class="nav-item">
           <a class="nav-link" href="/login">Sign In</a>
     </li>
+    <% end %>
   </ul>
   </div>
   </nav>

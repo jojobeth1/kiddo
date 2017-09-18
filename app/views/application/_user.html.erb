@@ -1,8 +1,20 @@
-<div class="container">
-  <h1>USER PAGE</h1>
+<% user = current_user %>
+<% is_owner = user ? user.id == @user.id : false %>
 
-  <h3><%= "#{@user.username}" %></h3>
+<div class="container">
+
+  <h1><%= "#{@user.username}" %></h1>
 
   <h4><%= "#{@user.email}" %></h4>
+
+  <div class="bio grey-text text-darken-1">
+      <p><i><%= @user.bio %></i></p>
+    </div>
+    <% if is_owner %>
+      <div>
+        <a class="btn" href=<%= edit_user_path %>>Edit Profile</a>
+      </div>
+    <% end %>
+  </div>
 
 </div>
