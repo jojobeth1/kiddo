@@ -1,6 +1,6 @@
 module SessionsHelper
   def login(user)
-    sessions[:user_id] = user.id
+    session[:user_id] = user.id
     @current_user = user
   end
 
@@ -12,7 +12,7 @@ module SessionsHelper
     @current_user = sessions[:user_id] = nil
   end
 
-  def authorized?(resource_id)
-    @current_user.id == resource_id
-  end
+  # def authorized?(resource_id)
+  #   @current_user.id == resource_id
+  # end
 end
