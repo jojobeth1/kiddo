@@ -1,24 +1,7 @@
-# README
+# Let's Go, Kiddo!
+Rain or shine, families can have a great time! Tired of the same old places you take your family? Look up places of interest for your children with Let's Go, Kiddo! Get location info, comment on a place and what you thought of it for others to see. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Link
 
-Things you may want to cover:
+[Let's Go, Kiddo](https://lets-go-kiddo.herokuapp.com/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
