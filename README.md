@@ -32,9 +32,11 @@ Places Page
 3. A user can ‘add to’ favorites. *
 4. A user can see all Places for a city.*
 5. A user can upload photos for place.*
-Note: * Future Feature
+
+_Note: * Future Feature_
 
 ## Installation Steps
+
 
 ## Entity relationship diagrams
 ![alt text](https://github.com/jojobeth1/kiddo/blob/master/ERD.png "ERD for Project Kiddo")
