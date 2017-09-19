@@ -1,7 +1,26 @@
-<section class="container">
-  <h1><%= "#{@place.name}" %></h1>
-  <address>
-    <%= "#{@place.address}" %>
-  </address>
+<div class="container">
 
-</section>
+  <div class="center">
+    <h1><%= "#{@place.name}" %></h1>
+    <address><%= "#{@place.address}" %></address>
+    <ul>
+      <li>
+        <%= "#{@place.phone}" %>
+      </li>
+      <li>
+        <%= "#{@place.hours}" %>
+      </li>
+      <li>
+        <%= "#{@place.url}" %>
+      </li>
+    </ul>
+    <p>
+      <%= "#{@place.about}" %>
+    </p>
+    <%= button_to "Edit", edit_place_path(@place), method: :get, class: "btn" %>
+  </div>
+  <div class="right">
+    <!-- <%= button_to "Delete", delete_place_path(@place), method: "destroy", class:"btn"%> -->
+    <%= button_to "Delete", @place, :method => :delete, class: "btn btn-danger", :confirm => "Are you sure?" %>
+      </div>
+</div>

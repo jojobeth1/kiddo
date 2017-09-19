@@ -1,5 +1,7 @@
-<h1>Places</h1>
+<div class="container">
+  <h1>Places</h1>
+  <% @places.each do |place| %>
+  <h4><%= link_to "#{place.name}", place_path(place.id) %></h4>
 
-<p>
-  To come
-</p>
+<% end %>
+</div>

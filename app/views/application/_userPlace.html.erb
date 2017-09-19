@@ -3,13 +3,16 @@
    <div>
      <% if is_owner %>
        <div class="new-post-button" style="margin-bottom:25px;">
-         <%= button_to "New Place", new_place_path, method: :get, class: "btn" %>
+         <%= button_to "New Place", new_place_path, method: :get, class: "btn btn-primary" %>
        </div>
+       <p>
+         Click "New Place" to add a great place to take a kid.
+       </p>
      <% end %>
    </div>
 
    <div class="place">
-       <h5>Click "New Place" to start writing about a place.</h5>
+
 
        <% @places.each do |place| %>
          <h4><%= link_to "#{place.name}", place_path(place.id) %></h4>

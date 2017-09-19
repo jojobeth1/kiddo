@@ -2,17 +2,15 @@
 <% is_owner = user ? user.id == @user.id : false %>
 
 <div class="container">
-
-  <h1><%= "#{@user.username}" %></h1>
-
-  <h4><%= "#{@user.email}" %></h4>
-
-  <div class="bio grey-text text-darken-1">
-      <p><i><%= @user.bio %></i></p>
-    </div>
+<h2><%= "#{@user.username}" %></h2>
+<h4><%= "#{@user.first} " "#{@user.last}" %></h4>
+<p><%= "#{@user.bio}" %></p>
+<p>Number of kids:
+  <%=" #{@user.num_of_kids}" %>
+</p>
     <% if is_owner %>
       <div>
-        <a class="btn" href=<%= edit_user_path %>>Edit Profile</a>
+        <a class="btn btn-info" href=<%= edit_user_path %>>Edit Profile</a>
       </div>
     <% end %>
   </div>
