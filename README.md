@@ -6,12 +6,15 @@ Rain or shine, families can have a great time! Tired of the same old places you 
 [Let's Go, Kiddo](https://lets-go-kiddo.herokuapp.com/)
 
 ## Technologies Used
-* Built with Ruby on Rails
+* Built with Ruby on Rails 5.1.4
 * PostgreSQL/Active Record
 * Bootstrap
 * HTML/CSS
 * Heroku (app deployment)
 * Adobe Illustrator (wireframes)
+
+### Gems
+*FFaker
 
 ## Wireframes 
 ![alt text](https://github.com/jojobeth1/kiddo/blob/master/wireframes-kiddo.png "Wireframes for Project Kiddo")
@@ -36,10 +39,29 @@ Places Page
 _Note: * Future Feature_
 
 ## Installation Steps
+1. Make sure you have Ruby on Rails installed. See here for [directions](http://installrails.com/steps/choose_os) if you do not. 
+
+2. Clone this github repo `$ git clone [copied repo url]`
+
+3. Change directory (cd) into the folder
+
+4. Run `$ rails s` in another terminal window to start the server. 
+
+5. Go to `localhost: 3000`
+
+6. Run `$ rails db:migrate` to build database. 
 
 
 ## Entity relationship diagrams
 ![alt text](https://github.com/jojobeth1/kiddo/blob/master/ERD.png "ERD for Project Kiddo")
 
 
-## Future Features
+## Future Development
+* Front-end design
+* ability to add a user photo/avatar.
+* email confirmation when a user creates an account.
+* change forms to modals. 
+* Dashboard set up for user. User will be able to see the cities and places they added. 
+* buttons for social media
+* implement Google maps
+* implement Foursquare API for places
