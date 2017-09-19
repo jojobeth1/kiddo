@@ -5,3 +5,21 @@ Rain or shine, families can have a great time! Tired of the same old places you 
 
 [Let's Go, Kiddo](https://lets-go-kiddo.herokuapp.com/)
 
+## Technologies Used
+* Built with Ruby on Rails
+* PostgreSQL/Active Record
+* Bootstrap
+* HTML/CSS
+* Heroku (app deployment)
+* Adobe Illustrator (wireframes)
+
+## Wireframes
+
+
+## User Stories
+
+## Installation Steps
+
+## Entity relationship diagrams
+
+## Future Features
