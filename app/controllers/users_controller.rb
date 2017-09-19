@@ -31,30 +31,25 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @comments = Comment.where user_id: @user.id
-    @comments = @comments.reverse
+    # @comments = Comment.where user_id: @user.id
+    # @comments = @comments.reverse
     @places = Place.where user_id: @user.id
-    #@places = @places.reverse
+    @places = @places.reverse
   end
 
   def edit
-    user = User.find_by username: params[:username]
-    if !user || user.id != session[:user_id]
-      flash[:error]="You are not authorized to edit this user's profile."
-      redirect_to user_path params[:username]
-    else
-      @user = User.find_by username: params[:username]
-    end
+    @user = User.find(params[:id])
+
   end
 
   def update
-    user_params = require
+    @user = User.find(params[:id])
+    user_params = params.require(:user).permit(:first, :last, :bio, :num_of_kids)
+    @user.update_attributes(user_params)
+    redirect_to @user
+    
   end
 
-  # private
-  #
-  # def user_params
-  #   params.require(:user).permit(:username, :email, :password_digest)
-  # end
+
 
 end

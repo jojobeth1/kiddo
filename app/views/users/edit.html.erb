@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Edit Your Profile</h2>
+  <div class="form-group">
+  <%= form_for @user do |f| %>
+  <div class="row">
+    <div class="col-9">
+      <label>First name</label>
+        <%= f.text_field :first, class: "form-control" %><br />
+        <label>Last name</label>
+        <%= f.text_field :last, class: "form-control" %><br/>
+
+      <label>Bio</label>
+      <%= f.text_area :bio, class: "form-control" %></br/>
+      <label>How many children to you have?</label>
+      <%= f.text_field :num_of_kids, class: "form-control" %></br/>
+      <%= f.submit "Submit", class: "btn" %>
+    </div>
+  </div>
+<% end %>
+    </div>
+</div>
