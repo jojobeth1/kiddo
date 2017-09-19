@@ -18,11 +18,9 @@
     <%= render partial: 'header' %>
     <div>
       <% flash.each do |key, value| %>
-        <div class="center">
-          <%= value %>
-        </div>
-      <% end %>
     </div>
+    <div class="flash-m"> <%= value %></div>
+    <% end %>
     <%= yield %>
     <%= render partial: 'footer' %>
   </body>

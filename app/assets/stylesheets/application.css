@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ .container{
+  margin-top: 50px;
+ }
+ footer{
+   margin: 50px 25px;
+ }
+.about-pic {
+  width: 250px;
+  float: left;
+  margin: 0 25px 25px 0;
+}
+.about-p{
+  margin-bottom: 300px;
+}
+.flash-m{
+  text-align: center;
+}
